@@ -9,22 +9,52 @@
 
 <body>
     <center>hello,welcome to world of web!</center>
-    <center>this  is center</center>
-    <h1>This                is h1</h1><!--html中多个空格只能识别一个-->
-    <h1>没想到吧我还是h1！</h1><!--很想吐槽为啥一样是h1汉字能比英文大那么多，草-->
-    <h2>This &nbsp; &nbsp; &nbsp; is h2</h2><!--&nbsp;为空格字符，一个字符只算一个空格-->
+    <center>this is center</center>
+    <!--width可以没有，也可以是px(另外，百分数指的是占页面大小，并不是图片自身大小-->
+    <img src="img/37f30f1f0be15b2ed66eb00a560366af.jpg" width="5%" title="鼠标划上去显示的文字">
+    <img src="img/37f30f1f0be15b2ed66eb00a560366af1.jpg" width="5%" alt="显示图片失败显示的文字">
+    <h1>This is h1</h1>
+    <!--html中多个空格只能识别一个-->
+    <h1>没想到吧我还是h1！</h1>
+    <!--很想吐槽为啥一样是h1汉字能比英文大那么多，草-->
+    <h2>This &nbsp; &nbsp; &nbsp; is h2</h2>
+    <!--&nbsp;为空格字符，一个字符只算一个空格-->
     <h3>This is h3</h3>
     <h4>This is h4</h4>
     <h5>This is h5</h5>
     <h6>This is h6</h6>
     <i>Italitics(斜体)</i>
+    <u>下划线</u>
+    <del>删除线</del>
     <button>button</button>
-    <hr><!--用来画横线-->
+    <hr>
+    <!--sup中的内容显示为右上角角标-->
+    <p>100<sup>2</sup></p>
+    <!--用来画横线-->
+    <a href="untitled2.html">这里是直接跳转到index2的link</a>
+    <a href="untitled2.html" target="_blank">这里是新窗口打开index2的link</a>
     <p>p里面的文字是</p>
-    <p>占据一行的</p>并不需要换行符
+    <p>占据一行的</p>两个p标签中间并不需要换行符也会单开一行
     <p>好耶</p>
     <b>加粗</b>
-    <br><!--换行-->
+    <br>
+    <!--换行-->
+
+    <!--无序列表(type为disc表示字前符号为实心圆，circle空心圆，square实心方块，不写默认disc-->
+    <ul type="disc">
+        <li>
+            First ulLI
+        </li>
+        <li>
+            Second ulLI
+        </li>
+    </ul>
+
+    <!--有序列表(type为1表示从1开始的数字，a和A为字母，I和i为罗马字母，不写默认是1-->
+    <ol type="1">
+        <li>First olli</li>
+        <li>Second olli</li>
+    </ol>
 </body>
 
 </html>
