@@ -12,19 +12,38 @@
     <p>input可以有很多不同的type，但是这些type在不同浏览器兼容度不同，很多浏览器对很多type是不兼容的= =</p>
     <!--action里面可以放表单提交到的地址-->
     <form action="untitled2.html">
-        <table>
+        <table border="2">
             <colgroup span="3" width="50px">
             <tr height="20px">
-                <td rowspan="5">hello</td>
+                <td rowspan="6">hello</td>
                 <th colspan="3">hi</th>
             </tr>
             <tr>
                 <td>username</td>
-                <!--type的text代表输入框,name为输入内容的标签名-->
-                <td><input type="text" name="username"></td>
+                <!--type的text代表输入框,name为输入内容的标签名,placeholder为占位字-->
+                <td><input type="text" name="username" placeholder="xxx"></td>
                 <!--type的submit表示提交按钮，value里面写的是按钮的名字,点击按钮后会跳转到action的地址里-->
                 <td><input type="submit" value="submit"></td>
-                <td><input type="radio" name="selected">单选框</td>
+                <td><input type="radio" name="selected">单选框
+                    <!-- for的内容必须与id一致 -->
+                    <input type="radio" id="sel" name="selected"><label for="sel">可以点文字选中</label>
+
+                </td>
+                <td>
+                    <input type="checkbox" name="selection" value="001" checked>复选选项1
+                    <input type="checkbox" name="selection" value="002">复选选项2
+                    <input type="checkbox" name="selection" value="003">复选选项3
+                </td>
+                <td>
+                    <!-- size表示选项个数 -->
+                    <select name="selc" id="selc" size="2">
+                        <!-- selected默认选中，disabled不可再次选择 -->
+                        <option selected disabled>下拉菜单</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                    </select>
+                </td>
             </tr>
             <tr>
                 <td>password</td>
@@ -32,45 +51,49 @@
                 <td><input type="password" name="password"></td>
                 <!--type的reset表示提交按钮，value里面写的是按钮的名字，点击后重置整个表单-->
                 <td><input type="reset" value="reset"></td>
-                <td><input type="file">文件选择</td>
+                <td><input type="file" id="selected"></td>
+                <td>
+                    <textarea name="texta" id="textar" cols="20" rows="3"></textarea>
+                </td>
+                <td></td>
             </tr>
             </colgroup>
         </table>
     </form>
 
 
-<h2>get和post（可以混用，但是请别）</h2>
-<h3>get 获取，即将内容丢进对应的网页，出现在地址栏上，用户可见</h3>
-<form action="untitled2.html" method="GET">
-    <table>
-        <tr>
-            <td>username</td>
-            <td><input type="text" name="usr"></td>
-            <td><input type="submit" value="submit"></td>
-        </tr>
-        <tr>
-            <td>password</td>
-            <td><input type="password" name="psw"></td>
-            <td><input type="reset" value="reset"></td>
-        </tr>
-    </table>
-</form>
+    <h2>get和post（可以混用，但是请别）</h2>
+    <h3>get 获取，即将内容丢进对应的网页，出现在地址栏上，用户可见</h3>
+    <form action="untitled2.html" method="GET">
+        <table>
+            <tr>
+                <td>username</td>
+                <td><input type="text" name="usr"></td>
+                <td><input type="submit" value="submit"></td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <td><input type="password" name="psw"></td>
+                <td><input type="reset" value="reset"></td>
+            </tr>
+        </table>
+    </form>
 
-<h3>post 提交，也是将内容交给网页，但是用户不可见</h3>
-<form action="untitled2.html" method="POST">
-    <table>
-        <tr>
-            <td>username</td>
-            <td><input type="text" name="usr1"></td>
-            <td><input type="submit" value="submit"></td>
-        </tr>
-        <tr>
-            <td>password</td>
-            <td><input type="password" name="psw1"></td>
-            <td><input type="reset" value="reset"></td>
-        </tr>
-    </table>
-</form>
+    <h3>post 提交，也是将内容交给网页，但是用户不可见</h3>
+    <form action="untitled2.html" method="POST">
+        <table>
+            <tr>
+                <td>username</td>
+                <td><input type="text" name="usr1"></td>
+                <td><input type="submit" value="submit"></td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <td><input type="password" name="psw1"></td>
+                <td><input type="reset" value="reset"></td>
+            </tr>
+        </table>
+    </form>
 
 
 
@@ -78,6 +101,7 @@
     <!--table 由thead表格的页眉，tbody表格的主体，tfooter表格的页脚组成，什么都不写浏览器会自动生成tbody-->
     <!--border表示边框宽度,html5中table不再提供border以外的属性，需要使用css添加其他内容-->
     <!--rowspan和colspan都需要删除被合并的格子，没有被合并的格子即使没有内容也要写tr和td-->
+    <caption>表格题目</caption>
     <table border="1px">
         <!--col中的内容是格子宽度，第n个col代表第n列-->
         <col width="100px">
@@ -119,7 +143,7 @@
     </table>
 
     <table>
-        <!--thead和tfoot都在tbody之前而且必须三个都存在，thead和tfoot中必须存在至少一个tr-->
+        <!--thead和tfoot都在tbody之前而且必须三个都存在，thead和tfoot中必须存在至少一个tr且thead和tfoot均只有一个-->
         <!--thead为表头，tfoot近似于表脚注-->
         <!--可以使用多个tbody对大表格进行分块-->
         <!--html5不支持thead和tfoot的任何属性-->

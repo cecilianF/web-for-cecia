@@ -1,0 +1,12 @@
+{
+    "extra_liners": ["head", "body", "/html"],
+    "indent_body_inner_html": true,
+    "indent_head_inner_html": true,
+    "indent_inner_html": false,
+    "indent_scripts": "normal",
+    "wrap_attributes": "auto",
+    "wrap_attributes_indent_size": 2,
+    "unformatted": [],
+    "content_unformatted": ["pre","textarea"]
+  }
+  
