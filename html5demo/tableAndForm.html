@@ -1,11 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table and Form</title>
 </head>
+
 <body>
-    
+    <h2>This is form</h2>
+    <p>input可以有很多不同的type，但是这些type在不同浏览器兼容度不同，很多浏览器对很多type是不兼容的= =</p>
+    <!--action里面可以放表单提交到的地址-->
+    <form action="untitled2.html">
+        <table>
+            <colgroup span="3" width="50px">
+            <tr height="20px">
+                <td rowspan="5">hello</td>
+                <th colspan="3">hi</th>
+            </tr>
+            <tr>
+                <td>username</td>
+                <!--type的text代表输入框,name为输入内容的标签名-->
+                <td><input type="text" name="username"></td>
+                <!--type的submit表示提交按钮，value里面写的是按钮的名字,点击按钮后会跳转到action的地址里-->
+                <td><input type="submit" value="submit"></td>
+                <td><input type="radio" name="selected">单选框</td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <!--type的password代表密码，输入时全部以*展示（但是似乎在http地址栏是正常显示的-->
+                <td><input type="password" name="password"></td>
+                <!--type的reset表示提交按钮，value里面写的是按钮的名字，点击后重置整个表单-->
+                <td><input type="reset" value="reset"></td>
+                <td><input type="file">文件选择</td>
+            </tr>
+            </colgroup>
+        </table>
+    </form>
+
+
+<h2>get和post（可以混用，但是请别）</h2>
+<h3>get 获取，即将内容丢进对应的网页，出现在地址栏上，用户可见</h3>
+<form action="untitled2.html" method="GET">
+    <table>
+        <tr>
+            <td>username</td>
+            <td><input type="text" name="usr"></td>
+            <td><input type="submit" value="submit"></td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td><input type="password" name="psw"></td>
+            <td><input type="reset" value="reset"></td>
+        </tr>
+    </table>
+</form>
+
+<h3>post 提交，也是将内容交给网页，但是用户不可见</h3>
+<form action="untitled2.html" method="POST">
+    <table>
+        <tr>
+            <td>username</td>
+            <td><input type="text" name="usr1"></td>
+            <td><input type="submit" value="submit"></td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td><input type="password" name="psw1"></td>
+            <td><input type="reset" value="reset"></td>
+        </tr>
+    </table>
+</form>
+
+
+
+    &nbsp;&nbsp;&nbsp;<h2>This is a table</h2>
+    <!--table 由thead表格的页眉，tbody表格的主体，tfooter表格的页脚组成，什么都不写浏览器会自动生成tbody-->
+    <!--border表示边框宽度,html5中table不再提供border以外的属性，需要使用css添加其他内容-->
+    <!--rowspan和colspan都需要删除被合并的格子，没有被合并的格子即使没有内容也要写tr和td-->
+    <table border="1px">
+        <!--col中的内容是格子宽度，第n个col代表第n列-->
+        <col width="100px">
+        <!--colgroup表示span内数字的列数的width为200px，col和colgroup可以混合使用，从上向下依次生效（colgroup是有结束标签的，col没有-->
+        <!--span中数目高于表格内列数能够正常运行，修改其中所有列，span不写或者为0或1都是只在一列生效-->
+        <colgroup span="2" width="200px">
+            <!--tr中可以加入height属性，用来修改该列列高度，不影响其他列-->
+        <tr>
+            <!--colspan中的数字代表占据几个单元格的宽度，不写默认为一个-->
+            <!--align="center"代表其中文字居中显示，当然也可以在标签内嵌套<center></center>来实现-->
+            <td align="center" colspan="4">
+                HELLO
+            </td>
+        </tr>
+        <tr>
+            <!--<tr></tr>相当于一个加粗并水平居中的<td></td>-->
+            <th colspan="4">HI</th>
+        </tr>
+        <!--height内的数字为该行高度，仅对当前行生效-->
+        <tr height="30px">
+            <td></td>
+            <td>(1,1)</td>
+            <td>(1,2)</td>
+            <td>(1,3)</td>
+        </tr>
+        <tr>
+            <!--rowspan中的数字代表占据几个单元格的高度，不写默认1-->
+            <td rowspan="2"></td>
+            <td>(2,1)</td>
+            <td>(2,2)</td>
+            <td>(2,3)</td>
+        </tr>
+        <tr>
+            <td>(3,1)</td>
+            <td>(3,2)</td>
+            <td>(3,3)</td>
+        </tr>
+        </colgroup>
+    </table>
+
+    <table>
+        <!--thead和tfoot都在tbody之前而且必须三个都存在，thead和tfoot中必须存在至少一个tr-->
+        <!--thead为表头，tfoot近似于表脚注-->
+        <!--可以使用多个tbody对大表格进行分块-->
+        <!--html5不支持thead和tfoot的任何属性-->
+        <thead>
+            <tr>
+                <td>?</td>
+                <td>headd</td>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td>well</td>
+                <td>foott</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <th colspan="2">hbody</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
+
 </html>

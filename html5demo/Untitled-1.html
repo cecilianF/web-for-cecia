@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!--lang为language的缩写，en代表英语，实际上汉语是zh-CN，但是我懒得一遍遍改了= =-->
+<!--如果浏览器的默认语言和 lang 属性的 value 值相同的话，是不会弹出是否翻译弹框的-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,8 +22,10 @@
     <!--&nbsp;为空格字符，一个字符只算一个空格-->
     <h3>This is h3</h3>
     <h4>This is h4</h4>
-    <h5>This is h5</h5>
+    <h5>This<h2>is</h2> is h5</h5>
+    <h5>hello ?</h5>
     <h6>This is h6</h6>
+    <p>形如h1的标题标签不允许互相嵌套(被直接截成了三段且第三段不再是标题字符）</p>
     <i>Italitics(斜体)</i>
     <u>下划线</u>
     <del>删除线</del>
@@ -36,6 +39,8 @@
     <p>p里面的文字是</p>
     <p>占据一行的</p>两个p标签中间并不需要换行符也会单开一行
     <p>好耶</p>
+
+    <p>在p标签里<p>套p标签</p>结果是变成了三段，因为浏览器修复掉了嵌套的错误</p>
     <b>加粗</b>
     <br>
     <!--换行-->

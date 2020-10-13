@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有关不会出现在网页里的html和head标签的那些事</title>
+</head>
+
+<body>
+    <center>
+        <h1>有关不会出现在网页里的html和head标签的那些事</h1>
+    </center>
+    <!--在正文部分需要用&lt;代替<,&gt;代替>-->
+    <h2>&lt;html&gt;标签的lang选项</h2>
+    <p>&lt;html lang="en"&gt;中lang为language的缩写，en代表英语，实际上汉语是zh-CN</p>
+    <p>如果浏览器的默认语言和如果浏览器的默认语言和 lang 属性的 value 值相同的话，是不会弹出是否翻译弹框的</p>
+    <hr>
+    <h2>&lt;meta&gt;里的charset选项</h2>
+    <p>charset=”utf-8”是告知浏览器此页面属于什么字符编码格式，下一步浏览器做好“翻译”工作。常见的字符编码有：gb2312、gbk、unicode、utf-8。</p>
+    <table border="2">
+        <tr>
+            <td align="center">名称</td>
+            <td align="center">特点</td>
+        </tr>
+        <tr>
+            <td>gb2312</td>
+            <td>代表国家标准第2312条，其中是不包含繁体的</td>
+        </tr>
+        <tr>
+            <td>gbk</td>
+            <td>国家标准扩展版（增加了繁体，包含所有亚洲字符集）</td>
+        </tr>
+        <tr>
+            <td>unicode</td>
+            <td>为每种语言中的每个字符设定了统一并且唯一的二进制编码，以满足跨语言、跨平台进行文本转换、处理的要求</td>
+        </tr>
+        <tr>
+            <td>utf-8</td>
+            <td>unicode的升级版。</td>
+        </tr>
+    </table>
+
+    <h2>&lt;meta&gt;的name和content</h2>
+    <p>name属性主要用于描述网页，比如网页的关键词，叙述等。与之对应的属性值为content，content中的内容是对name填入类型的具体描述，
+        便于搜索引擎抓取。</p>
+    <p>
+        meta标签中name属性语法格式是：</p>
+        <h4>&lt;meta name="参数" content="具体的描述"&gt;</h4>
+        <h3>常用name属性</h3>
+        <a href="https://www.cnblogs.com/chenqiBlog/p/9517619.html">更多内容</a>
+        <table border="1">
+            <tr>
+                <td align="center">name</td>
+                <td align="center">content</td>
+                <td align="center">example</td>
+            </tr>
+            <tr>
+                <td>keywords（关键字）</td>
+                <td>用于告诉搜索引擎网页的关键字</td>
+                <td>&lt;meta name="keywords" content="Cecia，前端"&gt;</td>
+            </tr>
+            <tr>
+                <td>description(网站内容的描述)</td>
+                <td>用于告诉搜索引擎网站的主要内容</td>
+                <td>&lt;meta name="description" content="这是我的网页"&gt;</td>
+            </tr>
+            <tr>
+                <!--所以为什么默认居然是viewport。。。-->
+                <td>viewport(移动端的窗口)</td>
+                <td>常用于设计移动端网页</td>
+                <td>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</td>
+            </tr>
+        </table>
+</body>
+
+</html>
