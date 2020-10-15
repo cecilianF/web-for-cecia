@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            height: 100%;
+        }
+        .head {
+            background-color: #00CED1;
+            height: 50px;
+            width: 100%;
+            margin-top: -10px;
+        }
+
+        .head .p0 {
+            font-size: 24px;
+            font-family: 'Times New Roman', Times, serif;
+            color: #000;
+            text-align: center;
+            padding: 10px;
+        }
+        #tail{
+            background-color: #00CED1;
+            height: 50px;
+            width: 100%;
+            min-height: 100%;
+        }
+        #tail #ptail{
+            font-size: 24px;
+            font-family: 'Times New Roman', Times, serif;
+            color: #000;
+            text-align: center;
+            padding: 10px;
+        }
+
+/* color是字体颜色，background-color才是背景色哦 */
+        #id1 {
+            height: 30px;
+            width: 80%;
+            font-size: large;
+            color: #ffffff;
+            background-color: rgb(83, 17, 138);
+            text-align: center;
+        }
+
+        .class1 {
+            height: 30px;
+            width: 80%;
+            font-size: large;
+            color: #ffffff;
+            background-color: rgb(181, 184, 40);
+            text-align: center;
+        }
+        .main{
+            margin: 10px;
+            text-align: left;
+            width: 100%;
+            height: 50px;
+            font-size: x-large;
+        }
+        #id2{
+            height: 1000px;
+            width: 100%;
+            text-align: center;
+            background-color: bisque;
+        }
+    </style>
+    <title>CssInPage</title>
+</head>
+
+<body>
+    <div>
+        <div class="head">
+            <div class="p0">我是用CLASS选择器做的表头</div>
+        </div>
+        <div>
+            <h1>这里是只有在这个页面才能生效的css的效果DEMO</h1>
+        </div>
+        <div style="height: 30px;width: 80%;font-size: large;color: #ffffff;background-color: #000;text-align: center;">
+            <p>这个div的css在&lt;div style="..."&gt;的style里面:</p>
+        </div>
+        <div class="main"><h2>以下的css都在&lt;head&gt;的&lt;style&gt;里面</h2></div>
+        <div class="class1">这个div的css在class选择器里</div>
+        <div id="id1">这个div的css在id选择器里</div>
+        <!-- <div id="id2">我是用来占位子的- -</div> -->
+        <!-- <div id="id2">我是用来占位子的- -</div> -->
+        <!-- <div id="id2">我是用来占位子的- -</div> -->
+        <!-- <div id="id2">我是用来占位子的- -</div> -->
+        <div id="tail">
+            <div id="ptail">我是永远在底下的id选择器做的表尾</div>
+            
+        </div>
+    </div>
+</body>
+
+</html>

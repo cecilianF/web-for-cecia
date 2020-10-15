@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta class="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一些杂七杂八</title>
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        #image1 {
+            /* repeat 是默认值，即默认水平垂直都平铺 */
+            background-repeat: repeat;
+            background-image: url("img/37f30f1f0be15b2ed66eb00a560366af.jpg");
+            text-align: center;
+            height: 100px;
+        }
+
+        #image2 {
+            /* repeat-x 水平平铺 */
+            background-repeat: repeat-x;
+            background-image: url("img/37f30f1f0be15b2ed66eb00a560366af.jpg");
+            text-align: center;
+            height: 100px;
+        }
+
+        #image3 {
+            /* repeat-y 垂直平铺 */
+            background-repeat: repeat-y;
+            background-image: url("img/37f30f1f0be15b2ed66eb00a560366af.jpg");
+            text-align: center;
+            height: 100px;
+        }
+
+        #image4 {
+            /* no-repeat 即不平铺 */
+            background-image: url("img/37f30f1f0be15b2ed66eb00a560366af.jpg");
+            text-align: center;
+            background-repeat: no-repeat;
+            height: 100px;
+        }
+
+        #image5 {
+            background-image: url("img/37f30f1f0be15b2ed66eb00a560366af.jpg");
+            text-align: center;
+            height: 100px;
+            background-repeat: no-repeat;
+            /* 数字指图片偏移数值 前者为x轴，后者为y轴 （也可以是百分数*/
+            background-position: 50px 1px;
+        }
+        #image6 {
+            background-image: url("img/37f30f1f0be15b2ed66eb00a560366af.jpg");
+            text-align: center;
+            height: 100px;
+            background-repeat: no-repeat;
+            /* 也可以是其他单词 */
+            background-position: right bottom;
+        }
+        #image7 {
+            background-image: url("img/37f30f1f0be15b2ed66eb00a560366af.jpg");
+            text-align: center;
+            height: 100px;
+            background-repeat: no-repeat;
+            /* 效果和background-position: 50% 50%; 一样 */
+            background-position: center center;
+        }
+        #image8 {
+            background-image: url("img/37f30f1f0be15b2ed66eb00a560366af.jpg");
+            text-align: center;
+            height: 100px;
+            /* 背景图是否随滚动条滚动（默认为scroll，即滚动 */
+            /* （这个时候的background-position会变成相对整个浏览器的位置，所以div 不够大的话同时使用可能会看不到图片） */
+            background-attachment: fixed;
+        }
+        #image9 {
+            background-image: url("img/37f30f1f0be15b2ed66eb00a560366af.jpg");
+            text-align: center;
+            height: 100px;
+            background-repeat: no-repeat;
+        }
+
+
+
+        #color1 {
+            background-color: brown;
+            color: #fff;
+            text-align: center;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_common">
+        <div class="main">
+            <div class="blank"></div>
+            <div class="page">
+                
+                <div class="left">
+                    <center>这里是背景图片不平铺的情况</center>
+                    <div id="image8">background-repeat: no-repeat;</div>
+                </div>
+                <div class="right">
+                    <center>这里是背景图片的情况</center>
+                    <div id="image1">
+                        background-repeat: repeat;或者不写
+                    </div>
+                    <div class="blank_min"></div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="left">
+                    <center>这里是背景图片水平平铺的情况</center>
+                    <div id="image2">background-repeat: repeat-x;</div>
+                </div>
+                <div class="right">
+                    <center>这里是背景图片垂直平铺的情况</center>
+                    <div id="image3">background-repeat: repeat-y;</div>
+                </div>
+            </div>
+
+            <div class="page">
+                <div class="left">
+                    <center>这里是背景图片不平铺的情况</center>
+                    <div id="image4">background-repeat: no-repeat;</div>
+                </div>
+                <div class="right">
+                    <center>这里是背景图片右偏移50px，下偏移1px的情况</center>
+                    <div id="image5">background-position: 50px 1px;</div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="left">
+                    <center>这里是背景图片在右下角的情况</center>
+                    <div id="image6">background-position: right bottom;</div>
+                </div>
+                <div class="right">
+                    <center>这里是背景图片居中情况</center>
+                    <div id="image7">background-position: center center;</div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="left">
+                    <center>这里是背景为固定颜色的情况</center>
+                    <div id="color1">
+                        background-color: brown;
+                    </div>
+
+                </div>
+                <div class="right">
+                    <center>这里是背景图片居中情况</center>
+                    <div id="image9">background-position: center center;</div>
+                </div>
+            </div>
+            <div class="blank_min"></div>
+            <div class="blank"></div>
+        </div>
+    </div>
+</body>
+
+</html>

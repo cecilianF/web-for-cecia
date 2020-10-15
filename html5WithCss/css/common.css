@@ -1,0 +1,42 @@
+body{
+    background-color: bisque;
+}
+
+.main_common{
+    height: auto;
+    margin: 30px;
+    background-color: rgb(173, 169, 177);
+
+}
+.main_commo .main{
+    height: auto;
+    margin: 30px;
+}
+.main_common .main .blank{
+    height: 20px;
+}
+.blank_min{
+    height: 10px;
+}
+.main_common .main .page{
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgb(230, 239, 240);
+    overflow: hidden;
+}
+.left{
+    width: 49%;
+    float: left;
+    margin-right: 1%;
+    background-color: lightgoldenrodyellow;
+}
+.right{
+    width: 49%;
+    float: right;
+    background-color: lightgoldenrodyellow;
+}
+.colors{
+    background-color: brown;
+
+}

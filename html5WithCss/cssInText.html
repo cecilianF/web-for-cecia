@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta class="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一些杂七杂八</title>
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        #text1{
+            text-align: center;
+            /* font-size 字体大小 */
+            font-size: large;
+            /* font-weight 字体粗细，实际上只有normal和bold两种 */
+            font-weight: bold;
+            /* font-style 字体样式，实际上也只有normal和斜体（常用的italic和强制斜体的oblique */
+            font-style: italic;
+        }
+        #text2{
+            text-align: center;
+            /* font-size 字体大小 */
+            font-size: large;
+            color: whitesmoke;
+            /* text-decoration: rgb(230, 205, 205); */
+            /* text-decoration-color: whitesmoke; 似乎只有火狐支持这个属性*/
+            text-decoration: underline;
+        }
+        #text2{
+            text-align: center;
+            /* font-size 字体大小 */
+            font-size: large;
+            color: whitesmoke;
+            /* text-decoration: rgb(230, 205, 205); */
+            /* text-decoration-color: whitesmoke; 似乎只有火狐支持这个属性*/
+            text-decoration: underline;
+        }
+        #text5{
+            font-size: large;
+            /* text-indent 首行缩进 em单位与字体大小一样，中英文混用可能还是对不整齐*/
+            text-indent: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_common">
+        <div class="main">
+            <div class="blank"></div>
+            <div class="page">
+
+                <div class="left">
+                    <center id="text1">我是一行加粗还斜体的大号示例文字</center>
+
+                </div>
+                <div class="right">
+                    <div class="colors">
+                        <center id="text2">这里是使用text-decoration加了下划线的大号示例文字</center></div>
+
+                    <div class="blank_min"></div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="left">
+                    <center style="text-decoration:overline ;">这里是text-decoration:overline的情况</center>
+                </div>
+                <div class="right">
+                    <center style="text-decoration: line-through;">这里是 style="text-decoration:line-through 的情况</center>
+                </div>
+            </div>
+            <div class="page">
+                <div class="left">
+                    <center style="text-decoration:overline line-through underline ;">这里是全加上的情况</center>
+                </div>
+                <div class="right">
+                    <center style="font-family: 'Times New Roman', Times, serif;">这里是啥也没有的一段大小写英文aSaDaGa</center>
+                </div>
+            </div>
+            <div class="page">
+                <div class="left">
+                    <center id="text4">这里是本该啥也没有的一段大小写英文aSaDaGa</center>
+                </div>
+                <div class="right">
+                    <center>text-indent首行缩进用示例：</center>
+                    <p id="text5">蚁群算法是一种用来寻找优化路径的概率型算法。灵感来源于蚂蚁在寻找食物过程中发现路径的行为。
+                        这种算法具有分布计算、信息正反馈和启发式搜索的特征，本质上是进化算法中的一种启发式全局优化算法。</p>
+                </div>
+            </div>
+            <div class="blank_min"></div>
+            <div class="blank"></div>
+        </div>
+    </div>
+</body>
+
+</html>
