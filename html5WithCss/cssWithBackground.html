@@ -4,7 +4,7 @@
 <head>
     <meta class="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>一些杂七杂八</title>
+    <title>与背景图有关的css</title>
     <link rel="stylesheet" href="css/common.css">
     <style>
         #image1 {
@@ -80,6 +80,13 @@
 
 
 
+        /* 如下所示，部分情况下可以使用复合样式，减少代码行数 */
+        #div1{
+            background:brown no-repeat 10% 10% url("img/37f30f1f0be15b2ed66eb00a560366af.jpg");
+            height:100px;
+            width: auto;
+        }
+
         #color1 {
             background-color: brown;
             color: #fff;
@@ -151,6 +158,12 @@
                     <div id="image9">background-position: center center;</div>
                 </div>
             </div>
+            <div class="page">
+                <div id="div1">
+                    <center style="font-size: larger; color:#fff;">测试复合样式用div（background:brown no-repeat 10% 10% url("img/37f30f1f0be15b2ed66eb00a560366af.jpg");）</center>
+                </div>
+            </div>
+            <div class="page"><a href="视觉差.html">扩展阅读：怎样制作视觉差效果背景图</a></div>
             <div class="blank_min"></div>
             <div class="blank"></div>
         </div>

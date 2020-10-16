@@ -4,10 +4,12 @@
 <head>
     <meta class="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>一些杂七杂八</title>
+    <title>与文字排版有关的css</title>
     <link rel="stylesheet" href="css/common.css">
     <style>
-        #text1{
+        /* 基础设定 */
+        #text1 {
+            /* text-align: justify;两端对齐 */
             text-align: center;
             /* font-size 字体大小 */
             font-size: large;
@@ -16,28 +18,67 @@
             /* font-style 字体样式，实际上也只有normal和斜体（常用的italic和强制斜体的oblique */
             font-style: italic;
         }
-        #text2{
+
+        /* text-decoration 上下划线 */
+        #text2 {
             text-align: center;
-            /* font-size 字体大小 */
-            font-size: large;
-            color: whitesmoke;
             /* text-decoration: rgb(230, 205, 205); */
             /* text-decoration-color: whitesmoke; 似乎只有火狐支持这个属性*/
             text-decoration: underline;
         }
-        #text2{
-            text-align: center;
+
+        /* line-height: 行高*/
+        #text3 {
             /* font-size 字体大小 */
             font-size: large;
-            color: whitesmoke;
-            /* text-decoration: rgb(230, 205, 205); */
-            /* text-decoration-color: whitesmoke; 似乎只有火狐支持这个属性*/
-            text-decoration: underline;
+
+            /* line-height: 行高 单位可以为px或者em（1和1em是一样的效果，是根据当前字符的大小按比例计算） */
+            line-height: 2;
         }
-        #text5{
+
+        /* 对照用默认组 */
+        #text4 {
+            font-size: large;
+        }
+
+
+        /* text-indent 首行缩进*/
+        #text5 {
             font-size: large;
             /* text-indent 首行缩进 em单位与字体大小一样，中英文混用可能还是对不整齐*/
             text-indent: 2em;
+        }
+
+        /* text-transform:更改大小写*/
+        #text6 {
+            font-size: large;
+            /* text-transform:更改大小写：owercase;全部转成小写；，uppercase全部大写，capitalize首字母大写  */
+            text-transform: lowercase;
+        }
+
+        /* letter-spacing 定义字间距 */
+        #text7 {
+            font-size: large;
+            letter-spacing: 2px;
+        }
+        /* word-spacing 定义词间距（仅限英文 */
+        #text8 {
+            font-size: large;
+            word-spacing: 2em;
+        }
+        /* word-break:break-all 用来强制换行 */
+        #text9 {
+            font-size: large;
+            word-break: break-all;
+            /* word-wrap: break-word; */
+            color: blueviolet;
+        }
+        /* word-warp:break-word 没有word-break那么强制 会产生部分空白区域*/
+        #text10 {
+            font-size: large;
+            /* word-break: break-all; */
+            word-wrap: break-word;
+            color:brown;
         }
     </style>
 </head>
@@ -47,14 +88,12 @@
         <div class="main">
             <div class="blank"></div>
             <div class="page">
-
+                <p class="pdemo">text-decoration示例</p>
                 <div class="left">
                     <center id="text1">我是一行加粗还斜体的大号示例文字</center>
-
                 </div>
                 <div class="right">
-                    <div class="colors">
-                        <center id="text2">这里是使用text-decoration加了下划线的大号示例文字</center></div>
+                    <center id="text2">这里是text-decoration:underline的情况</center>
 
                     <div class="blank_min"></div>
                 </div>
@@ -64,27 +103,127 @@
                     <center style="text-decoration:overline ;">这里是text-decoration:overline的情况</center>
                 </div>
                 <div class="right">
-                    <center style="text-decoration: line-through;">这里是 style="text-decoration:line-through 的情况</center>
+                    <center style="text-decoration: line-through;">这里是 text-decoration:line-through 的情况</center>
                 </div>
             </div>
             <div class="page">
                 <div class="left">
-                    <center style="text-decoration:overline line-through underline ;">这里是全加上的情况</center>
+                    <center style="text-decoration:overline line-through underline ;">这里是text-decoration:overline
+                        line-through underline ;的情况</center>
                 </div>
                 <div class="right">
-                    <center style="font-family: 'Times New Roman', Times, serif;">这里是啥也没有的一段大小写英文aSaDaGa</center>
+                    <center>这里是用来对比的情况</center>
                 </div>
             </div>
+            <div class="blank_min"></div>
             <div class="page">
+                <p class="pdemo">text-transform字符转换示例</p>
                 <div class="left">
-                    <center id="text4">这里是本该啥也没有的一段大小写英文aSaDaGa</center>
+                    <center style="font-size: large;">这里是啥也没有的一段大小写英文aSaDaGa</center>
                 </div>
                 <div class="right">
-                    <center>text-indent首行缩进用示例：</center>
+                    <center id="text6">这里是一段text-transform: lowercase;了的大小写英文aSaDaGa</center>
+                </div>
+            </div>
+            <div class="blank_min"></div>
+            <div class="page">
+                <p class="pdemo">text-indent首行缩进示例</p>
+                <div class="left">
+                    <center>默认示例：</center>
+                    <p id="text6">蚁群算法是一种用来寻找优化路径的概率型算法。灵感来源于蚂蚁在寻找食物过程中发现路径的行为。
+                        这种算法具有分布计算、信息正反馈和启发式搜索的特征，本质上是进化算法中的一种启发式全局优化算法。</p>
+                </div>
+                <div class="right">
+                    <center>text-indent首行缩进2em示例：</center>
                     <p id="text5">蚁群算法是一种用来寻找优化路径的概率型算法。灵感来源于蚂蚁在寻找食物过程中发现路径的行为。
                         这种算法具有分布计算、信息正反馈和启发式搜索的特征，本质上是进化算法中的一种启发式全局优化算法。</p>
                 </div>
             </div>
+            <div class="blank_min"></div>
+            <div class="page">
+                <p class="pdemo">line-height行高修改示例</p>
+                <div class="left">
+                    <center>默认示例：</center>
+                    <p id="text4">蚁群算法是一种用来寻找优化路径的概率型算法。灵感来源于蚂蚁在寻找食物过程中发现路径的行为。
+                        这种算法具有分布计算、信息正反馈和启发式搜索的特征，本质上是进化算法中的一种启发式全局优化算法。</p>
+                </div>
+                <div class="right">
+                    <center>行高修改为2em示例：</center>
+                    <p id="text3">蚁群算法是一种用来寻找优化路径的概率型算法。灵感来源于蚂蚁在寻找食物过程中发现路径的行为。
+                        这种算法具有分布计算、信息正反馈和启发式搜索的特征，本质上是进化算法中的一种启发式全局优化算法。</p>
+                </div>
+            </div>
+            <div class="page">
+                <p class="pdemo">letter-spacing字间距修改示例</p>
+                <div class="left">
+                    <center>默认示例：</center>
+                    <p id="text4">蚁群算法是一种用来寻找优化路径的概率型算法。灵感来源于蚂蚁在寻找食物过程中发现路径的行为。
+                        这种算法具有分布计算、信息正反馈和启发式搜索的特征，本质上是进化算法中的一种启发式全局优化算法。</p>
+                </div>
+                <div class="right">
+                    <center>字间距修改为2px示例：</center>
+                    <p id="text7">蚁群算法是一种用来寻找优化路径的概率型算法。灵感来源于蚂蚁在寻找食物过程中发现路径的行为。
+                        这种算法具有分布计算、信息正反馈和启发式搜索的特征，本质上是进化算法中的一种启发式全局优化算法。</p>
+                </div>
+
+                <div class="left">
+                    <p id="text4">A the characteristics of positive feedback of distributed computing information
+                        and heuristic searnt colony algorithm is a probabilistic algorithm used to find the optimal path, which
+                        is inspired by the behavior of ants in finding the path in the process of searching for food.
+                        This algorithm hasch, and is essentially a heuristic global optimization algorithm in
+                        evolutionary algorithms</p>
+                </div>
+                <div class="right">
+                    <p id="text7">Ant colony algorithm is a probabilistic algorithm used to find the optimal path, which
+                        is inspired by the behavior of ants in finding the path in the process of searching for food.
+                        This algorithm has the characteristics of positive feedback of distributed computing information
+                        and heuristic search, and is essentially a heuristic global optimization algorithm in
+                        evolutionary algorithms</p>
+                </div>
+            </div>
+            <div class="page">
+                <p class="pdemo">word-spacing定义词间距示例（仅限英文）</p>
+                <div class="left">
+                    <center>默认示例：</center>
+                    <p id="text4">A the characteristics of positive feedback of distributed computing information
+                        and heuristic searnt colony algorithm is a probabilistic algorithm used to find the optimal path, which
+                        is inspired by the behavior of ants in finding the path in the process of searching for food.
+                        This algorithm hasch, and is essentially a heuristic global optimization algorithm in
+                        evolutionary algorithms</p>
+                </div>
+                <div class="right">
+                    <center>词间距2em示例：</center>
+                    <p id="text8">A the characteristics of positive feedback of distributed computing information
+                        and heuristic searnt colony algorithm is a probabilistic algorithm used to find the optimal path, which
+                        is inspired by the behavior of ants in finding the path in the process of searching for food.
+                        This algorithm hasch, and is essentially a heuristic global optimization algorithm in
+                        evolutionary algorithms</p>
+                </div>
+            </div>
+            <div class="page">
+                <p class="pdemo">word-break(或者word-warp)单词折行示例（仅限英文）</p>
+                <div class="left">
+                    <center>默认示例：</center>
+                    <p id="text4">Ant colony algorithmisaprobabilisticalgorithmusedtofindtheoptimalpathwhichisinspiredbythebehaviorofants in finding the path in the process of searching for food.
+                        This algorithm has the characteristics of positive feedback of distributed computing information
+                        and heuristic search, and is essentially a heuristic global optimization algorithm in
+                        evolutionary algorithms</p>
+                </div>
+                <div class="right">
+                    <center>折行示例(word-break:break-all)：</center>
+                    <p id="text9">Ant colony algorithmisaprobabilisticalgorithmusedtofindtheoptimalpathwhichisinspiredbythebehaviorofants in finding the path in the process of searching for food.
+                        This algorithm has the characteristics of positive feedback of distributed computing information
+                        and heuristic search, and is essentially a heuristic global optimization algorithm in
+                        evolutionary algorithms</p>
+                        
+                    <center>折行示例(word-wrap:break-word)：</center>
+                    <p id="text10">Ant colony algorithmisaprobabilisticalgorithmusedtofindtheoptimalpathwhichisinspiredbythebehaviorofants in finding the path in the process of searching for food.
+                        This algorithm has the characteristics of positive feedback of distributed computing information
+                        and heuristic search, and is essentially a heuristic global optimization algorithm in
+                        evolutionary algorithms</p>
+                </div>
+            </div>
+            
             <div class="blank_min"></div>
             <div class="blank"></div>
         </div>

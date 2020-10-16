@@ -22,7 +22,7 @@ body{
     padding: 20px;
     margin-left: 20px;
     margin-right: 20px;
-    background-color: rgb(230, 239, 240);
+    background-color: rgb(255, 255, 255);
     overflow: hidden;
 }
 .left{
@@ -39,4 +39,10 @@ body{
 .colors{
     background-color: brown;
 
+}
+.pdemo{
+    text-align: center;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
 }
