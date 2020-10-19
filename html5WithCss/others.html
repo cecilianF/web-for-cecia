@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        center {
+            font-size: 1.5em;
+            color: darkmagenta;
+        }
+
+        /* display: block;强制转换为块级元素，即一个标签独占一行，但可以设置宽高 */
+        #displayB1 {
+            display: block;
+            background-color: black;
+            color: #fff;
+            width: 500px;
+            font-size: 3em;
+
+        }
+
+        #displayB2 {
+            display: block;
+            font-size: 3em;
+            background-color: blueviolet;
+            color: #fff;
+            width: 500px;
+
+        }
+
+        /* display: inline;可以强制让标签元素转换成行级元素（即元素不独占一行，也不能设置高度 */
+        #displayI1 {
+            display: inline;
+            font-size: 3em;
+            background-color: blueviolet;
+            color: #fff;
+            width: 500px;
+        }
+
+        #displayI2 {
+            display: inline;
+            font-size: 3em;
+            background-color: brown;
+            color: #fff;
+            width: 500px;
+        }
+
+        /* display: inline-block;转换为非块级也非行级元素（不独占一行且可以设置宽高 */
+        #displayIB1 {
+            font-size: 3em;
+            display: inline-block;
+            background-color: black;
+            color: #fff;
+            width: 500px;
+
+        }
+
+        #displayIB2 {
+            font-size: 3em;
+            display: inline-block;
+            background-color: blueviolet;
+            color: #fff;
+            width: 500px;
+
+        }
+
+        #displayB3 {
+            font-size: 3em;
+            display: block;
+            width: 500px;
+            height: 300px;
+            background-color: cadetblue;
+
+        }
+
+        #displayB4 {
+            font-size: 3em;
+            display: block;
+            width: 500px;
+            height: 300px;
+            background-color: chocolate;
+
+        }
+
+
+        /* 直接隐藏多余内容 */
+        #overflowH {
+            overflow: hidden;
+            height: 8em;
+            font-size: 1.3em;
+        }
+
+        /* 根据内容大小智能选择要不要滚动条 */
+        #overflowA {
+            overflow: auto;
+            height: 8em;
+            font-size: 1.3em;
+        }
+
+        /* 不论够不够长都会出现滚动条 */
+        #overflowS {
+            overflow: scroll;
+            height: 8em;
+            font-size: 1.3em;
+        }
+
+        /* 不写的时候默认为visible，即溢出的也会显示在页面上 */
+        #overflowV {
+            overflow: visible;
+            height: 8em;
+            font-size: 1.3em;
+        }
+
+        /* opacity: x;能够改变整个标签的透明度，x取值从零到一透明度逐渐下降，低版本ie不是很兼容 */
+        #opacitys {
+            opacity: 0.5;
+            font-size: 1.3em;
+            background-color: darkmagenta;
+        }
+
+        /* rgba 和普通rgb一个用法，只会对设定了对应rgba值的内容起效 */
+        #rgbas {
+            font-size: 1.3em;
+            background-color: rgba(139, 0, 139, 0.5);
+        }
+
+        #centeri {
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        /* 默认为普通箭头 */
+        #cursorD {
+            text-align: center;
+            cursor: default;
+            background-color: darkmagenta;
+            font-size: 1.3em;
+
+        }
+
+        /* pointer会在移动到标签上时将手势转换成手掌 */
+        /* cursor:url();可以使用自定义光标，但此时图片必须为.ico或者.cur格式 */
+        #cursorP {
+            text-align: center;
+            background-color: darkmagenta;
+            cursor: pointer;
+            ;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="main_common">
+            <div class="main">
+                <div class="blank"></div>
+                <div id="centeri">在width：500px下的display的示例</div>
+                <div class="page">
+                    <div id="displayB1">div display:block</div>
+                    <div id="displayB2">div display:block</div>
+                    <div id="displayI2">div display:inline
+                    </div>
+                    <div id="displayI1">div
+                        display:inline</div>
+                    <div class="blank"></div>
+                    <div id="displayIB1">div
+                        display:inline-block</div>
+                    <div id="displayIB2">div
+                        display:inline-block</div>
+                    <span id="displayB3">span
+                        display:block;width:500px;height:300px;</span>
+                    <!-- 以空格或者回车分开的一串字符会被作为一个单词进行正常换行，而不加间隔的话就会当作一个字符，可能会导致超出背景大小 -->
+                    <span id="displayB4">span display:block; width:500px; height:300px;</span>
+                </div>
+                <div class="blank"></div>
+                <div id="centeri">overflow的示例</div>
+                <div class="page">
+                    <div class="left">
+                        <center>这里是overflow:visible或者不写的情况</center>
+                        <div id="overflowV">
+                            蚁群系统是由意大利学者Dorigo、Maniezzo等人于20世纪90年代首先提出来的。他们在研究蚂蚁觅食的过程中，发现单个蚂蚁的行为比较简单，但是蚁群整体却可以体现一些智能的行为。例如蚁群可以在不同的环境下，寻找最短到达食物源的路径。这是因为蚁群内的蚂蚁可以通过某种信息机制实现信息的传递。后又经进一步研究发现，蚂蚁会在其经过的路径上释放一种可以称之为“信息素”的物质，蚁群内的蚂蚁对“信息素”具有感知能力，它们会沿着“信息素”浓度较高路径行走，而每只路过的蚂蚁都会在路上留下“信息素”，这就形成一种类似正反馈的机制，这样经过一段时间后，整个蚁群就会沿着最短路径到达食物源了。
+                        </div>
+                    </div>
+                    <div class="right">
+                        <center>这里是overflow:hidden的情况</center>
+                        <div id="overflowH">
+                            蚁群系统是由意大利学者Dorigo、Maniezzo等人于20世纪90年代首先提出来的。他们在研究蚂蚁觅食的过程中，发现单个蚂蚁的行为比较简单，但是蚁群整体却可以体现一些智能的行为。例如蚁群可以在不同的环境下，寻找最短到达食物源的路径。这是因为蚁群内的蚂蚁可以通过某种信息机制实现信息的传递。后又经进一步研究发现，蚂蚁会在其经过的路径上释放一种可以称之为“信息素”的物质，蚁群内的蚂蚁对“信息素”具有感知能力，它们会沿着“信息素”浓度较高路径行走，而每只路过的蚂蚁都会在路上留下“信息素”，这就形成一种类似正反馈的机制，这样经过一段时间后，整个蚁群就会沿着最短路径到达食物源了。
+                        </div>
+                        <div class="blank_min"></div>
+                    </div>
+                </div>
+                <div class="page">
+                    <div class="left">
+                        <center>这里是overflow:scroll的情况</center>
+                        <div id="overflowS">
+                            蚁群系统是由意大利学者Dorigo、Maniezzo等人于20世纪90年代首先提出来的。他们在研究蚂蚁觅食的过程中，发现单个蚂蚁的行为比较简单，但是蚁群整体却可以体现一些智能的行为。例如蚁群可以在不同的环境下，寻找最短到达食物源的路径。这是因为蚁群内的蚂蚁可以通过某种信息机制实现信息的传递。后又经进一步研究发现，蚂蚁会在其经过的路径上释放一种可以称之为“信息素”的物质，蚁群内的蚂蚁对“信息素”具有感知能力，它们会沿着“信息素”浓度较高路径行走，而每只路过的蚂蚁都会在路上留下“信息素”，这就形成一种类似正反馈的机制，这样经过一段时间后，整个蚁群就会沿着最短路径到达食物源了。
+                        </div>
+                        <div class="blank_min"></div>
+                    </div>
+                    <div class="right">
+                        <center>这里是overflow:auto;的情况</center>
+                        <div id="overflowA">
+                            蚁群系统是由意大利学者Dorigo、Maniezzo等人于20世纪90年代首先提出来的。他们在研究蚂蚁觅食的过程中，发现单个蚂蚁的行为比较简单，但是蚁群整体却可以体现一些智能的行为。例如蚁群可以在不同的环境下，寻找最短到达食物源的路径。这是因为蚁群内的蚂蚁可以通过某种信息机制实现信息的传递。后又经进一步研究发现，蚂蚁会在其经过的路径上释放一种可以称之为“信息素”的物质，蚁群内的蚂蚁对“信息素”具有感知能力，它们会沿着“信息素”浓度较高路径行走，而每只路过的蚂蚁都会在路上留下“信息素”，这就形成一种类似正反馈的机制，这样经过一段时间后，整个蚁群就会沿着最短路径到达食物源了。
+                        </div>
+                        <div class="blank_min"></div>
+                    </div>
+
+                </div>
+                <div class="page">
+                    <div class="left">
+                        <center>这里也是overflow:scroll的情况</center>
+                        <div id="overflowS">
+                            蚁群算法是一种用来寻找优化路径的概率型算法。灵感来源于蚂蚁在寻找食物过程中发现路径的行为。</div>
+                        <div class="blank_min"></div>
+                    </div>
+                    <div class="right">
+                        <center>这里也是overflow:auto;的情况</center>
+                        <div id="overflowA">
+                            蚁群算法是一种用来寻找优化路径的概率型算法。灵感来源于蚂蚁在寻找食物过程中发现路径的行为。</div>
+                        <div class="blank_min"></div>
+                    </div>
+
+                </div>
+                <div class="blank"></div>
+                <div id="centeri">透明度调整示例</div>
+                <div class="page">
+                    <div class="left">
+                        <center>这里是使用opacity:x（x取0-1）的情况</center>
+                        <div id="opacitys">
+                            蚁群系统是由意大利学者Dorigo、Maniezzo等人于20世纪90年代首先提出来的。他们在研究蚂蚁觅食的过程中，发现单个蚂蚁的行为比较简单，但是蚁群整体却可以体现一些智能的行为。例如蚁群可以在不同的环境下，寻找最短到达食物源的路径。这是因为蚁群内的蚂蚁可以通过某种信息机制实现信息的传递。后又经进一步研究发现，蚂蚁会在其经过的路径上释放一种可以称之为“信息素”的物质，蚁群内的蚂蚁对“信息素”具有感知能力，它们会沿着“信息素”浓度较高路径行走，而每只路过的蚂蚁都会在路上留下“信息素”，这就形成一种类似正反馈的机制，这样经过一段时间后，整个蚁群就会沿着最短路径到达食物源了。
+                        </div>
+                        <div class="blank_min"></div>
+                    </div>
+                    <div class="right">
+                        <center>这里是 background-color:rgba(139,0,139,0.5);的情况</center>
+                        <div id="rgbas">
+                            蚁群系统是由意大利学者Dorigo、Maniezzo等人于20世纪90年代首先提出来的。他们在研究蚂蚁觅食的过程中，发现单个蚂蚁的行为比较简单，但是蚁群整体却可以体现一些智能的行为。例如蚁群可以在不同的环境下，寻找最短到达食物源的路径。这是因为蚁群内的蚂蚁可以通过某种信息机制实现信息的传递。后又经进一步研究发现，蚂蚁会在其经过的路径上释放一种可以称之为“信息素”的物质，蚁群内的蚂蚁对“信息素”具有感知能力，它们会沿着“信息素”浓度较高路径行走，而每只路过的蚂蚁都会在路上留下“信息素”，这就形成一种类似正反馈的机制，这样经过一段时间后，整个蚁群就会沿着最短路径到达食物源了。
+                        </div>
+                        <div class="blank_min"></div>
+                    </div>
+                </div>
+                <div class="blank"></div>
+                <div id="centeri">手势示例</div>
+                <div class="page">
+                    <div class="left">
+                        <center>这里是使用cursor:default;或者不写的情况</center>
+                        <div class="blank_min"></div>
+                        <div id="cursorD">
+                            鼠标移上来什么也不会变
+                        </div>
+                        <div class="blank_min"></div>
+                    </div>
+                    <div class="right">
+                        <center>这里是 cursor:pointer;的情况</center>
+                        <div class="blank_min"></div>
+                        <div id="cursorP"">
+                            鼠标移上来会变成手掌；
+                            
+                        </div>
+                        <div class=" blank_min"></div>
+                    </div>
+                </div>
+                <div class="blank"></div>
+                <div id="centeri">float示例</div>
+                <div class="page">
+                    <div class="left">
+                        <center>这里的红色是float：left的情况</center>
+                        <div class="blank_min"></div>
+                        <div style="float: left;height: 100px;width: 100px;background-color: red;">
+                        </div>
+                        <div style="height: 300px;width: 300px;background-color:black;">
+                        </div>
+                        <div class="blank_min"></div>
+                    </div>
+                    <div class="right">
+                        <center>这里的红色是float：right的情况</center>
+                        <div class="blank_min"></div>
+                        <div style="float: right;height: 100px;width: 100px;background-color: red;">
+                        </div>
+                        <div style="height: 300px;width: 300px;background-color:black;">
+                        </div>
+                        <div class=" blank_min"></div>
+                    </div>
+                    <div class="blank"></div>
+                    <div class="blank"></div>
+                    <div id="centeri">float的clear示例</div>
+                    <div class="page">
+                        <div class="left">
+                            <center>这里的红色是float：left的情况</center>
+                            <div class="blank_min"></div>
+                            <div style="float: left;height: 100px;width: 100px;background-color: red;">
+                            </div>
+                            <div style="height: 300px;width: 300px;background-color:black;clear:left;">
+                            </div>
+                            <div class="blank_min"></div>
+                        </div>
+                        <div class="right">
+                            <center>这里的红色是float：right的情况</center>
+                            <div class="blank_min"></div>
+                            <div style="float: right;height: 100px;width: 100px;background-color: red;">
+                            </div>
+                            <div style="height: 300px;width: 300px;background-color:black;clear: right;">
+                            </div>
+                            <div class=" blank_min"></div>
+                        </div>
+                        <div class="blank"></div>
+                    </div>
+                </div>
+                <div class="blank"></div>
+            </div>
+</body>
+
+</html>

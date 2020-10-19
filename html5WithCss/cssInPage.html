@@ -7,16 +7,16 @@
     <style>
         body{
             height: 100%;
+            font: normal 100%;
         }
         .head {
             background-color: #00CED1;
-            height: 50px;
             width: 100%;
             margin-top: -10px;
         }
 
         .head .p0 {
-            font-size: 24px;
+            font-size: 2em;
             font-family: 'Times New Roman', Times, serif;
             color: #000;
             text-align: center;
@@ -24,12 +24,11 @@
         }
         #tail{
             background-color: #00CED1;
-            height: 50px;
             width: 100%;
             min-height: 100%;
         }
         #tail #ptail{
-            font-size: 24px;
+            font-size: 2em;
             font-family: 'Times New Roman', Times, serif;
             color: #000;
             text-align: center;
@@ -38,18 +37,20 @@
 
 /* color是字体颜色，background-color才是背景色哦 */
         #id1 {
-            height: 30px;
+            /* height: 30px; */
             width: 80%;
-            font-size: large;
+            font-size: 3em;
             color: #ffffff;
             background-color: rgb(83, 17, 138);
             text-align: center;
         }
+        h2{
+            font-size: 3em;
+        }
 
         .class1 {
-            height: 30px;
             width: 80%;
-            font-size: large;
+            font-size: 2em;
             color: #ffffff;
             background-color: rgb(181, 184, 40);
             text-align: center;
@@ -58,11 +59,9 @@
             margin: 10px;
             text-align: left;
             width: 100%;
-            height: 50px;
-            font-size: x-large;
+            font-size: 3em;
         }
         #id2{
-            height: 1000px;
             width: 100%;
             text-align: center;
             background-color: bisque;
@@ -79,10 +78,10 @@
         <div>
             <h1 style="text-align: center;">这里是只有在这个页面才能生效的css的效果DEMO<a href="index.html">返回首页</a></h1>
         </div>
-        <div style="height: 30px;width: 80%;font-size: large;color: #ffffff;background-color: #000;text-align: center;">
+        <div style="height: 30px;width: 80%;font: size 2em;;color: #ffffff;background-color: #000;text-align: center;">
             <p>这个div的css在&lt;div style="..."&gt;的style里面:</p>
         </div>
-        <div class="main"><h2>以下的css都在&lt;head&gt;的&lt;style&gt;里面</h2></div>
+        <div class="main"><h2></h2>以下的css都在&lt;head&gt;的&lt;style&gt;里面</h2></div>
         <div class="class1">这个div的css在class选择器里</div>
         <div id="id1">这个div的css在id选择器里</div>
         <!-- <div id="id2">我是用来占位子的- -</div> -->
