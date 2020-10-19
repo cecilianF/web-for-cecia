@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <title>与伪类选择器有关的cssDEMO</title>
+    <base target="_blank">
+    <style>
+        center{
+            font-size: large;
+            font-weight: bold;
+        }
+        .classNormal, .classHover, .classActive, .classLink, .classVisited,.classMax{
+            text-align: center;
+            font-size: large;
+            background-color: burlywood;
+        }
+        /* 伪类选择器hover，作用是更改鼠标移入时的样式 */
+        .classHover p:hover{
+            background-color: lightcoral;
+        }
+        .classActive p:active{
+            background-color: white;
+        }
+        /* 可以多个伪类一起使用，但是必须以lvha的顺序编写，否则hover和active无法实现 */
+        .classMax a:link{
+            background-color: teal;
+        }
+        .classMax a:visited{
+            background-color: cyan;
+        }
+        .classMax a:hover{
+            background-color: lightcoral;
+        }
+        .classMax a:active{
+            background-color: white;
+        }
+        .classLink:link{
+            background-color: teal;
+        }
+        .classVisited:visited{
+            background-color: cyan;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main_common">
+        <div class="main">
+            <div class="blank"></div>
+            <div class="page">
+                <div class="left">
+                    <center>正常情况下</center>
+                    <div class="blank_min"></div>
+                    <div class="classNormal">
+                        <p>我是用来示例的文字</p>
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="blank_min"></div>
+
+                </div>
+
+                <div class="right">
+                    <center>
+                        使用hover伪类选择器</center>
+                    <div class="blank_min"></div>
+                    <div class="classHover">
+                        <p>我是用来示例的文字</p>
+                        <p>鼠标移上来会改变背景色哦</p>
+                        </div>
+                    <div class="blank_min"></div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="left">
+                    <center>正常情况下</center>
+                    <div class="blank_min"></div>
+                    <div class="classNormal">
+                        <p>我是用来示例的文字</p>
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="blank_min"></div>
+
+                </div>
+
+                <div class="right">
+                    <center>
+                        使用active伪类选择器</center>
+                    <div class="blank_min"></div>
+                    <div class="classActive">
+                        <p>我是用来示例的文字</p>
+                        <p>鼠标点击会改变背景色哦</p>
+                        </div>
+                    <div class="blank_min"></div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="left">
+                    <center>正常情况下</center>
+                    <div class="blank_min"></div>
+                    <div class="classNormal">
+                        <a href="#">我是用来示例的超链接</a>
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="blank_min"></div>
+
+                </div>
+
+                <div class="right">
+                    <center>
+                        使用全部active,hover,link,visited伪类选择器</center>
+                    <div class="blank_min"></div>
+                    <div class="classMax">
+                        <a href="#">我是用来示例的超链接</a>
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="blank_min"></div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="left">
+                    <center>正常情况下</center>
+                    <div class="blank_min"></div>
+                    <div class="classNormal">
+                        <a href="#">我是用来示例的超链接</a>
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="blank_min"></div>
+
+                </div>
+                <div class="right">
+                    <center>
+                        使用visited伪类选择器</center>
+                    <div class="blank_min"></div>
+                    <div class="classVisited">
+                        <a class="classVisited" href="#">我是用来示例的超链接</a>
+                        <p>&nbsp;</p>
+                        </div>
+                    <div class="blank_min"></div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="left">
+                    <center>正常情况下</center>
+                    <div class="blank_min"></div>
+                    <div class="classNormal">
+                        <a href="#">我是用来示例的超链接</a>
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="blank_min"></div>
+
+                </div>
+
+                <div class="right">
+                    <center>
+                        使用link伪类选择器</center>
+                    <div class="blank_min"></div>
+                    <div class="classLink">
+                        <a class="classLink" href="#">我是用来示例的超链接</a>
+                        <p>&nbsp;</p>
+                        </div>
+                    <div class="blank_min"></div>
+                </div>
+            </div>
+            <div class="blank_min"></div>
+            <div class="blank"></div>
+        </div>
+    </div>
+</body>
+
+</html>

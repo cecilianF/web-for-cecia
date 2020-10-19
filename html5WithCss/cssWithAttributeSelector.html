@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/common.css">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: grey;
+        }
+        div[id] {
+            font-size: x-large;
+            color: rgb(107, 79, 26);
+        }
+        div[class]{
+            background-color: brown;
+            color: wheat;
+            margin: 10px;
+            margin-left: 10%;
+            width: 80%;
+
+        }
+        h2{
+            background-color: rgb(102, 102, 15);
+        }
+        p[class]{
+            font-size: large;
+            color: cadetblue;
+            background-color: white;
+        }
+        p[id=h1a]{
+            color: blueviolet;
+            background-color: whitesmoke;
+        }
+        p[class*=s]{
+            color: cadetblue;
+            background-color: chartreuse;
+        }
+        h4[class^=d]{
+            color: chocolate;
+            background-color: darkgray;
+        }
+        h5[class $=m]{
+            color:indianred;
+            background-color: lavender;
+        }
+    </style>
+</head>
+<body>
+    <div id="h">
+        <center><h1>属性选择器<a href="index.html">返回首页</a></h1></center>
+        <div class="c">
+            <center><h3>M[class/id/...]只要有class或id的M标签就能匹配</h3></center>
+            <p class="h1a">css: p[class]; class=h1a效果</p>
+            <div class="blank_min"></div>
+        </div>
+        <div class="c">
+            <center><h3>M[class/id/... = ...]完全匹配（M的class或id必须和等号右面一模一样）</h3></center>
+            <p id="h1a">css:p[id=h1a], id=h1a效果</p>
+            <p id="h1b">css:p[id=h1a], id=h1b效果</p>
+            <div class="blank_min"></div>
+
+        </div>
+        <div class="c">
+            <center><h3>M[class/id/...*=...]部分匹配（M的class或id只要存在等号右面的内容就可以）</h3></center>
+            <p class="s">css:p[class*=s], class=s效果</p>
+            <p class="sa">css:p[class*=s], class=sa效果</p>
+            <p class="asa">css:p[class*=s], class=asa效果</p>
+            <p class="as">css:p[class*=s], class=as效果</p>
+            <p class="a1">css:p[class*=s], class=a1效果</p>
+            <div class="blank_min"></div>
+        </div>
+        <div class="c">
+            <center><h3>M[class/id/...$=...]结束匹配（M的class或id必须以等号右面的内容结尾）</h3></center>
+            <h5 class="m">css:h4[class$=m], class=m效果</h5>
+            <h5 class="am">css:h4[class$=m], class=am效果</h5>
+            <h5 class="ma">css:h4[class$=m], class=ma效果</h5>
+            <h5 class="ama">css:h4[class$=m], class=ama效果</h5>
+            <h5 class="a">css:h4[class$=m], class=a效果</h5>
+            <div class="blank_min"></div>
+        </div>
+        <div class="c">
+            <center><h3>M[class/id/...^=...]起始匹配（M的class或id必须以等号右面的内容开头）</h3></center>
+            <h4 class="d">css:h4[class^=d], class=d效果</h4>
+            <h4 class="ad">css:h4[class^=d], class=ad效果</h4>
+            <h4 class="da">css:h4[class^=d], class=da效果</h4>
+            <h4 class="ada">css:h4[class^=d], class=ada效果</h4>
+            <h4 class="a">css:h4[class^=d], class=a效果</h4>
+            <div class="blank_min"></div>
+        </div>
+    </div>
+    <div>
+
+    </div>
+</body>
+</html>

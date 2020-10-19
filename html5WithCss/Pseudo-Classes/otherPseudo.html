@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <title>与伪类选择器有关的cssDEMO</title>
+    <base target="_blank">
+    <style>
+        center{
+            font-size: large;
+            font-weight: bold;
+        }
+        .classFirstChild, .classNormal, .classAfter, .classBefore{
+            text-align: center;
+            font-size: large;
+            background-color: burlywood;
+        }
+        .classFirstChild p:first-child{
+            background-color: darkblue;
+            color:#fff;
+        }
+
+        /* content 的引号内是被添加的文字 */
+        /* content的内容会出现在整个标签的后面 */
+        .classAfter p::after{
+            content: "我是新添加内容";
+            color: red;
+        }
+        .classBefore p::before{
+            content: "我是新添加内容";
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main_common">
+        <div class="main">
+            <div class="blank"></div>
+            <div class="page">
+                <div class="left">
+                    <center>正常情况下</center>
+                    <div class="blank_min"></div>
+                    <div class="classNormal">
+                        <p>我是用来示例的文字</p>
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="blank_min"></div>
+
+                </div>
+
+                <div class="right">
+                    <center>
+                        使用first-child伪类选择器</center>
+                    <div class="blank_min"></div>
+                    <div class="classFirstChild">
+                        <p>我是第一行</p>
+                        <p>我是第二行</p>
+                        </div>
+                    <div class="blank_min"></div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="left">
+                    <center>正常情况下</center>
+                    <div class="blank_min"></div>
+                    <div class="classNormal">
+                        <p>我是第一行</p>
+                        <p>我是第二行</p>
+                    </div>
+                    <div class="blank_min"></div>
+
+                </div>
+
+                <div class="right">
+                    <center>
+                        使用after伪类选择器</center>
+                    <div class="blank_min"></div>
+                    <div class="classAfter">
+                        <p>我是第一行</p>
+                        <p>我是第二行</p>
+                        </div>
+                    <div class="blank_min"></div>
+                </div>
+            </div><div class="page">
+                <div class="left">
+                    <center>正常情况下</center>
+                    <div class="blank_min"></div>
+                    <div class="classNormal">
+                        <p>我是第一行</p>
+                        <p>我是第二行</p>
+                    </div>
+                    <div class="blank_min"></div>
+
+                </div>
+
+                <div class="right">
+                    <center>
+                        使用before伪类选择器</center>
+                    <div class="blank_min"></div>
+                    <div class="classBefore">
+                        <p>我是第一行</p>
+                        <p>我是第二行</p>
+                        </div>
+                    <div class="blank_min"></div>
+                </div>
+            </div>
+            
+            
+            <div class="blank_min"></div>
+            <div class="blank"></div>
+        </div>
+    </div>
+</body>
+
+</html>

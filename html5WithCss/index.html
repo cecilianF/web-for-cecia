@@ -1,24 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/common.css">
     <title>INDEX</title>
+    <style>
+        /* 选择器复用 */
+        #select1, #select2, #select3, #select4{
+            width: 100%;
+            font-size: x-large;
+            font-weight: bold;
+        }
+        /* 后代选择器 */
+        #select1 #descendant {
+            color: crimson;
+            border: 5px solid brown;
+        }
+        /* 父子选择器 */
+        #select2>#son {
+            color: crimson;
+            border: 5px solid brown;
+            text-align: center;
+        }
+        /* 兄弟选择器 */
+        #select3~#brother{
+            color: crimson;
+            border: 5px solid brown;
+            text-align: center;
+            background-color:darksalmon;
+            font-size: x-large;
+            font-weight: bold;
+
+        }
+        /* 相邻选择器 */
+        #select4 + #nearby{
+            color: crimson;
+            border: 5px solid brown;
+            text-align: center;
+            background-color:darksalmon;
+            font-size: x-large;
+            font-weight: bold;
+
+        }
+    </style>
 </head>
+
 <body>
     <div class="main_common">
-<div class="main">
-    <div class="blank"></div>
-    <div class="page"><center style="font-size: xx-large;">CSSDEMO</center></div>
-    <div class="page"><a href="cssInPage.html">只有在单一页面才能生效的css的效果DEMO</a></div>
-    <div class="page"><a href="cssInPage2.html">只有在单一页面才能生效的css的效果DEMO2（表头表尾固定在页面上</a></div>
-    <div class="page"><a href="cssWithBackground.html">与背景图有关的cssDEMO</a></div>
-    <div class="page"><a href="cssInText.html">与文字排版有关的cssDEMO</a></div>
-    <div class="blank"></div>
+        <div class="main">
+            <div class="blank"></div>
+            <div class="page">
+                <center style="font-size: xx-large;">CSSDEMO</center>
+            </div>
+            <div class="page"><a href="cssInPage.html">只有在单一页面才能生效的css的效果DEMO</a></div>
+            <div class="page"><a href="cssInPage2.html">只有在单一页面才能生效的css的效果DEMO2（表头表尾固定在页面上</a></div>
+            <div class="page"><a href="cssWithBackground.html">与背景图有关的cssDEMO</a></div>
+            <div class="page"><a href="cssInText.html">与文字排版有关的cssDEMO</a></div>
+            <div class="page"><a href="cssWithAttributeSelector.html">与属性选择器有关的cssDEMO</a></div>
+            <div class="blank"></div>
+            <div class="main">
+                <div class="page">
+                    <center>后代选择器</center>
+                    <div id="select1">
+                        wow
+                        <div id="descendant">hi
+                            <div id="descendant">hello（hi的嵌套div）
+                            </div>
+                        </div>
+                        <div id="descendant">hi的同级div
+                            <div id="descendant">hello
+                            </div>
+                        </div>
+                    </div>
+                    <div id="descendant">
+                        wow的同级div
+                    </div>
+                </div>
+                <div class="page">
+                    <center>父子选择器</center>
+                    <div id="select2">
+                        wow
+                        <div id="son">hi
+                            <div id="son">hello（hi的嵌套div）
+                            </div>
+                        </div>
+                        <div id="select2">
+                            <div id="son">hi的同级div
+                                <div id="son">hello
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="son">
+                        wow的同级div
+                    </div>
+                </div>
+                <div class="page">
+                    <center>兄弟选择器</center>
+                    <div id="select3">
+                        wow
+                        <div id="brother">hi
+                            <div id="brother">hello（hi的嵌套div）
+                            </div>
+                        </div>
+                        <div id="select3">
+                            <div id="brother">hi的同级div
+                                <div id="brother">hello
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="brother">
+                        wow的同级div
+                    </div>
+                </div>
+                <div class="page">
+                    <center>相邻选择器</center>
+                    <div id="select4">
+                        wow
+                        <div id="nearby">hi
+                            <div id="nearby">hello（hi的嵌套div）
+                            </div>
+                        </div>
+                        <div id="select4">
+                            <div id="nearby">hi的同级div
+                                <div id="nearby">hello
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="nearby">
+                        wow的同级div(nearby)
+                    </div>
+                    <div id="nearby">
+                        wow的同级div(nearby)
+                    </div>
+                    <div id="select4">
+                        wow的同级div(select4)
+                    </div>
+                    <div id="select4">
+                        wow的同级div(select4)
+                    </div>
+                    <div id="nearby">
+                        wow的同级div(nearby)
+                    </div>
+                </div>
+                <div class="blank_min"></div>
+                <div class="blank"></div>
+            </div>
 
-</div>
-
-    </div>
+        </div>
 </body>
+
 </html>
