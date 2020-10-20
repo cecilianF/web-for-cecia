@@ -1,0 +1,26 @@
+body{
+    background-color: goldenrod;
+}
+.main_Common{
+    background-color: gainsboro;
+    height: auto;
+    font-size: 1.2em;
+    margin: 30px;
+}
+.main_Common .main{
+    background-color: gray;
+    height: auto;
+    margin: 20px;
+}
+.blank{
+    height: 20px;
+    width: 100%;
+}
+.main_Common .main .blocks{
+    padding: 20px;
+}
+.headerFOnt{
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold;
+}
