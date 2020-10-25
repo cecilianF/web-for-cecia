@@ -1,7 +1,73 @@
 body{
-    margin: 0px;
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/8377118de26c21b1dfafebb0abb2ed64.jpg');
+    background-size: cover;
 }
-.mainL{
-    background-color: gray;
+.blank_Normal{
+    height: 20px;
+}
+.blank_Small{
+    height: 10px;
+}
+.main_Login{
+    background-color:rgba(26, 15, 15, 0.8);
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    /* margin-top: 20%; */
+    /* margin-left: 30%; */
+    /* height: 40%; */
+    width: 30%;
+    padding: 40px;
+    border-radius: 30px;
+}
+.main_Login .text_Center{
+    text-align: center;
+    font-size: x-large;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.main_Login .text_Normal{
+    margin-left: 10%;
+    margin-bottom: 10%;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+}
+.main_Login .text_Normal input{
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-bottom: 1px solid #FFF;
+    color: white;
+    background:transparent;
+    outline: none;
+}
+.main_Login .text_Normal label{
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
 
+.main_Login .text_Normal button{
+    left: 30%;
+    padding: 10px;
+    background-color: rgba(1, 84, 236,0.7);
+    border: none;
+    color:white;
+    font-size: larger;
+    margin-left: 40%;
+    margin-top: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius:5px;
+
+}
+.main_Login .text_Normal hr{
+    color:#fff;
+    margin-left: 20%;
+    margin-right: 20%;
 }
