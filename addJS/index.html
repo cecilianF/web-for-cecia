@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/common.css">
     <title>INDEX</title>
-    <script>
+    <!-- 使用src属性可以引入外联js文件,可以同时添加多个script，但是已经添加了src的标签文件里面就不能再写内容了 -->
+    <script type="text/javascript" src="js/example,js">
         // 内联样式，和css一样写在head标签内，但是和css的标签名不同以示区分
 
-// 直接这样写会在刷写页面的时候起效（弹框的时候整个界面都没渲染
-        alert('welcome to the page!');
+        // alert('welcome to the page!');⬅在这里的内容是不会显示的
+    </script>
+    <script>
+        // 直接这样写会在刷写页面的时候起效（弹框的时候整个界面都没渲染
+
+        // alert('hello?this is alert');
+        function onClose(){
+            window.close();
+        }
     </script>
 </head>
+
 <body>
     <div class="main_Common">
         <div class="blank"></div>
@@ -22,11 +32,14 @@
             <div class="blank"></div>
             <div class="page">
                 <!-- 行内样式，即js直接作为属性写在标签里面，如下onclick="alert('hi')"中onclik代表点击时的动作，alert是弹出警示框，‘’内为警示框显示的内容 -->
-            <button onclick="alert('hi')">hello</button></div>
+                <button onclick="alert('hi')">hello</button></div>
+                <!-- <button onclick="close()">bye</button> 是不会有任何效果的= = -->
+                <button onclick="onClose()">bye</button>
             <div class="blank"></div>
         </div>
         <div class="blank"></div>
     </div>
-    
+
 </body>
+
 </html>

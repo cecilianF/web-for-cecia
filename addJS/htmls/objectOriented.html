@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>面向对象</title>
+</head>
+<body>
+    <script>
+        var str = 'hello?这里是没有对象的面向对象';
+        console.log(str);
+        console.log('Unicode编码：');
+        //此外也可使用encodeURI()进行编码操作，
+        // 区别是encodeURI()不会对本身属于URI的特殊字符进行编码，比如冒号正斜杠问号和＃号，而encodeURIComponent()会对所有发现的非标准字符进行编码；
+        var stru = encodeURIComponent(str);
+        console.log(stru);
+        console.log('Unicode解码:');
+        //使用encodeURI()编码时解码使用decodeURI()
+        console.log(decodeURIComponent(stru));
+        
+    </script>
+</body>
+</html>

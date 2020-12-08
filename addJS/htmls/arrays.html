@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays In JS</title>
+</head>
+
+<body>
+    <script>
+        // 创建array数组
+        var arr1 = [1, 2, 3, 4];
+        var arr2 = new Array(4, 3, 2, 1);
+        // 直接写数组名会打印全部数组元素
+        console.log(arr1);
+        // 数组名[下标]可以获取到当前下标的数据（下标从0开始计算
+        console.log(arr1[2]);
+        //遍历数组(for)
+        console.log('遍历数组(for)');
+        for (var i = 0; i < arr1.length; i++) {
+            console.log(arr1[i]);
+        }
+        //遍历数组(for...in)
+        console.log('遍历数组（for...in)');
+        for (var i in arr1) {
+            console.log(arr1[i]);
+        }
+        console.log('遍历数组(forEach())');
+        arr1.forEach(function (value) {
+            console.log(value);
+        });
+
+        console.log('对数组（以一维数组为例）的操作');
+        console.log('获取长度(.length）');
+        console.log(arr1.length);
+
+        // push(i);向数组最后一位元素之后添加数据i
+        console.log('向数组最后一位元素之后添加数据(.push(i);)');
+        arr1.push(5);
+        console.log(arr1);
+        // pop();删除数组最后一位数据
+        console.log('删除数组最后一位数据(. pop();)');
+        console.log(arr2);
+        arr2.pop();
+        console.log(arr2);
+
+        console.log('向数组头部添加数据(. unshift(i);)');
+        console.log(arr1);
+        arr1.unshift(0);
+        console.log(arr1);
+
+        console.log('删除第一个数据(. shift();)');
+        console.log(arr1);
+        arr1.shift();
+        console.log(arr1);
+        console.log('合并多个数组(. concat();)');
+        var arr3 = arr1.concat(arr2);
+        console.log(arr3);
+        console.log('倒序数组(. reverse();)');
+        console.log(arr1)
+        console.log(arr1.reverse());
+
+        console.log('把数组转化成字符串(. join();)');
+        var str = arr1.join('');//''内为数组数据之间的分隔符，不写’‘默认为，
+        console.log(arr1);
+        console.log(str);
+
+        console.log('(. splice();)');
+        console.log(arr1);
+        console.log('删除数据(.splice(1,2)     结果为 '+ arr1.splice(1,2));//删除从下标1开始的2个数
+        var arr1 = [5,4,3,2,1];
+        console.log('修改数组元素(.splice(1,2,\'a\')     结果为 '+ arr1.splice(1,2,'a'));//将下标1开始的2个数替换为a
+        var arr1 = [5,4,3,2,1];
+        console.log('插入元素(.splice(1,0,\'a\') 结果为');//向下标1后加入a(1改为0就是头插，1改为arr1.length-1是尾插)
+        arr1.splice(1,0,'a');
+        console.log(arr1);
+        
+console.log('二维数组：');
+// 二维数组的构建
+var arra1 = [[1,2],[4,3],[5,6]];
+console.log(arra1);
+console.log('二维数组的遍历（for');
+for(var i = 0;i < arra1.length;i++)//先遍历行
+{
+    for(var j = 0;j < arra1[i].length;j++)//再遍历列
+    {
+        console.log(arra1[i][j]);
+    }
+}
+console.log('二维数组的遍历（for..in');
+for(var i in arra1){
+    for (var j in arra1[i]){
+        
+    console.log(arra1[i][j]);
+    }
+}
+console.log('二维数组的遍历（forEach()')
+arra1.forEach(function(v){
+    v.forEach(function (v1) {console.log(v1);  })
+})
+
+    </script>
+</body>
+
+</html>
